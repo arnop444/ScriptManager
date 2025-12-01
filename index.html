@@ -8,14 +8,47 @@
 <body>
 
 <header>
-    <h1>Script Manager</h1>
+    <h3>Script Manager</h3>
     <p>Éditeur de scripts AutoFOE</p>
 </header>
 
 <main>
-    <textarea id="editor" placeholder="Votre script ici..."></textarea>
-</main>
+    
+<div id="rec_buttons">
+    <div class="champs_script">
+        <div id="script1">
+            <select id="btn_rec_load" class="bouton btn1">📁 Charger</select>
+            <textarea id="script_editor"></textarea>
+            <button id="btn_rec_backup" class="bouton btn5">💾 Sauvegarde</button>
+        </div>
+        <div id="script2">
+            <select id="btn_rec_other" class="bouton btn3">📑 Modèles</select>
+            <textarea id="script_modele"></textarea>
+            <button id="btn_rec_copy" class="bouton btn4">✅ Copie</button>
+        </div>
+    </div>
+</div>
 
+<div id="rec_bottom">
+    <div class="rec_wait">
+        <div id="rec_tempo">
+            Temporisation :
+            <input id="rec_wait_champ" value="0.5" size="4" />
+            <button id="rec_appliquer" class="bouton btn6">🏹 Appliquer</button>
+        </div>
+        <div id="rec_position">
+            Position souris : 
+            <input id="rec_pos" size="15" readonly />
+            <button id="rec_getpos" class="bouton btn8">📍 MOV</button>
+            <button id="rec_deplacement" class="bouton btn8">🚗 Déplacement</button>
+        </div>
+        <div id="rec_sequence">
+            <button id="rec_inserer" class="bouton btn8">🔪 Séquence</button>
+        </div>
+    </div>
+</div>
+<div id="rec_message" class="message"></div>
+</main>
 <script src="app.js"></script>
 </body>
 </html>
